@@ -45,18 +45,13 @@ header {
     color: white;
     z-index: 1; /* Asegura que el contenido quede encima de las imágenes */
 }
-.container {
-    padding: 50px;
-}
 
-.container h2 {
-    font-size: 28px;
-    color: black;
-    padding: 10px; /* Añade un poco de espacio alrededor del texto */
-    display: inline-block; /* Hace que el ancho del h2 se ajuste al contenido */
+.content h2{
+    background-color: #4CAF50;
     border-radius: 50px;
+    padding: 10px 20px;
+    display: inline-block;
 }
-
 
 .buttons {
     margin-top: 30px;
