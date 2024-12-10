@@ -5,7 +5,7 @@ body {
     background-position: center center; /* Centra la imagen en la página */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
     background-attachment: fixed; /* Hace que la imagen no se mueva al hacer scroll */
-    background-color: #f0f0f0;
+    background-color: #7b8879;
     margin: 0;
     padding: 0;
     text-align: center;
@@ -17,8 +17,9 @@ header {
     padding: 20px;
     font-size: 24px;
     font-weight: bold;
-    width: 600px; /* Ancho fijo del header */
+    width: 400px; /* Ancho fijo del header */
     margin: 0 auto; /* Esto centra el header horizontalmente */
+    border-radius: 50px;
 }
 
 .container {
