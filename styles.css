@@ -1,13 +1,9 @@
-body {
-    font-family: Arial, sans-serif;
-    background-image: url('img/multitatareas.png');
-    background-size: 40%; /* Hace que la imagen cubra todo el fondo */
-    background-position: center center; /* Centra la imagen en la página */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    background-attachment: fixed; /* Hace que la imagen no se mueva al hacer scroll */
+ /* Estilos globales */
+ body, html {
     margin: 0;
     padding: 0;
-    text-align: center;
+    height: 100%;
+    font-family: Arial, sans-serif;
 }
 
 header {
@@ -20,6 +16,35 @@ header {
     border-radius: 50px;
 }
 
+  /* Contenedor principal */
+  .background-container {
+    height: 100vh; /* Hace que el contenedor ocupe toda la altura de la pantalla */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Estilo para cada capa de fondo */
+.background-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover; /* Hace que la imagen cubra todo el contenedor */
+    background-position: center;
+    opacity: 0.5; /* Establece la opacidad para dar el efecto de cascada */
+    transition: opacity 1s ease;
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centra el contenido */
+    text-align: center;
+    color: white;
+    z-index: 1; /* Asegura que el contenido quede encima de las imágenes */
+}
 .container {
     padding: 50px;
 }
