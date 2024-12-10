@@ -1,5 +1,10 @@
 body {
     font-family: Arial, sans-serif;
+    background-image: url('img/multitatareas.png');
+    background-size: 40%; /* Hace que la imagen cubra todo el fondo */
+    background-position: center center; /* Centra la imagen en la página */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-attachment: fixed; /* Hace que la imagen no se mueva al hacer scroll */
     background-color: #f0f0f0;
     margin: 0;
     padding: 0;
@@ -24,6 +29,7 @@ header {
 
 .buttons {
     margin-top: 30px;
+    padding: 100px;
 }
 
 .buttons button {
