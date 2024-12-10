@@ -5,15 +5,13 @@ body {
     background-position: center center; /* Centra la imagen en la página */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
     background-attachment: fixed; /* Hace que la imagen no se mueva al hacer scroll */
-    background-color: #7b8879;
     margin: 0;
     padding: 0;
     text-align: center;
 }
 
 header {
-    background-color: #8de790;
-    color: rgb(10, 10, 10);
+    color: black;
     padding: 20px;
     font-size: 24px;
     font-weight: bold;
@@ -28,8 +26,7 @@ header {
 
 .container h2 {
     font-size: 28px;
-    color: white;
-    background-color: rgb(59, 59, 59);
+    color: black;
     padding: 10px; /* Añade un poco de espacio alrededor del texto */
     display: inline-block; /* Hace que el ancho del h2 se ajuste al contenido */
     border-radius: 50px;
