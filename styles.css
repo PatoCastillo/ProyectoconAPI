@@ -1,5 +1,10 @@
 body {
     font-family: Arial, sans-serif;
+    background-image: url('img/multitatareas.png');
+    background-size: 40%; /* Hace que la imagen cubra todo el fondo */
+    background-position: center center; /* Centra la imagen en la página */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-attachment: fixed; /* Hace que la imagen no se mueva al hacer scroll */
     background-color: #f0f0f0;
     margin: 0;
     padding: 0;
@@ -7,10 +12,13 @@ body {
 }
 
 header {
-    background-color: #4CAF50;
-    color: white;
+    background-color: #8de790;
+    color: rgb(10, 10, 10);
     padding: 20px;
     font-size: 24px;
+    font-weight: bold;
+    width: 600px; /* Ancho fijo del header */
+    margin: 0 auto; /* Esto centra el header horizontalmente */
 }
 
 .container {
@@ -24,6 +32,7 @@ header {
 
 .buttons {
     margin-top: 30px;
+    padding: 100px;
 }
 
 .buttons button {
