@@ -12,11 +12,15 @@ body {
 }
 
 header {
-    background-color: #4CAF50;
-    color: white;
+    background-color: #8de790;
+    color: rgb(10, 10, 10);
     padding: 20px;
     font-size: 24px;
+    font-weight: bold;
+    width: 600px; /* Ancho fijo del header */
+    margin: 0 auto; /* Esto centra el header horizontalmente */
 }
+
 
 .container {
     padding: 50px;
