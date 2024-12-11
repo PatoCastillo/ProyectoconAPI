@@ -1,5 +1,5 @@
- // Lista de imágenes para el fondo
- const imagenes = [
+// Lista de imágenes para el fondo
+const imagenes = [
     'img/1.jpg',
     'img/2.jpg',
     'img/3.jpg',
@@ -36,7 +36,7 @@ setInterval(cambiarFondo, 10000);
 // Cambiar la imagen al cargar la página por primera vez
 cambiarFondo();
 
-//API buscar libro 
+// API buscar libro 
 document.getElementById('bookSearchForm').addEventListener('submit', function (event) {
     event.preventDefault(); // Prevenir el comportamiento por defecto del formulario
 
@@ -63,10 +63,15 @@ document.getElementById('bookSearchForm').addEventListener('submit', function (e
                     const title = book.title || 'Sin título';
                     const author = book.author_name ? book.author_name.join(', ') : 'Autor desconocido';
                     const firstPublishYear = book.first_publish_year || 'Año desconocido';
+                    const coverId = book.cover_i; // ID de la portada
+
+                    // URL de la imagen del libro
+                    const imageUrl = coverId ? `https://covers.openlibrary.org/b/id/${coverId}-M.jpg` : 'img/default-cover.jpg'; // Imagen por defecto si no hay
 
                     const resultItem = document.createElement('div');
                     resultItem.className = 'result-item';
                     resultItem.innerHTML = `
+                        <img src="${imageUrl}" alt="${title}" style="width:100px; height:auto;"/>
                         <h3>${title}</h3>
                         <p><strong>Autor(es):</strong> ${author}</p>
                         <p><strong>Año de publicación:</strong> ${firstPublishYear}</p>
@@ -82,4 +87,3 @@ document.getElementById('bookSearchForm').addEventListener('submit', function (e
             resultsContainer.innerHTML = '<p>Ocurrió un error al buscar libros.</p>'; // Mensaje de error
         });
 });
-
