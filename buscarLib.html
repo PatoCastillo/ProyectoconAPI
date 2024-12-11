@@ -7,16 +7,23 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="background-container">
+        <div class="background-layer"></div>
+        <div class="background-layer"></div>
+        <div class="background-layer"></div>
+        <div class="background-layer"></div>
+    </div>
     <div class="content">
         <header>Buscar Libros</header>
         <h2>Encuentra libros interesantes</h2>
         <form id="bookSearchForm">
             <input type="text" id="searchQuery" placeholder="Escribe el título del libro" required>
             <button type="submit">Buscar</button>
+            <button id="Regresar" onclick="window.location.href='index.html'">Regresar</button>
         </form>
         <div id="results" class="results"></div>
     </div>
     
-    <script src="script.js"></script>
 </body>
+<script src="script.js"></script>
 </html>
