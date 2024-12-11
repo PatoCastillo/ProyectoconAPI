@@ -83,6 +83,26 @@ header {
     background-color: #45a049;
 }
 
+#Regresar {
+    margin-top: 30px;
+}
+
+#Regresar {
+    padding: 15px 25px;
+    font-size: 18px;
+    margin: 10px;
+    cursor: pointer;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+}
+
+#Regresar button:hover {
+    background-color: #45a049;
+}
+
 
 form {
     margin-bottom: 20px;
