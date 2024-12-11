@@ -87,3 +87,9 @@ document.getElementById('bookSearchForm').addEventListener('submit', function (e
             resultsContainer.innerHTML = '<p>Ocurrió un error al buscar libros.</p>'; // Mensaje de error
         });
 });
+
+// Función para limpiar la búsqueda
+document.getElementById('clearSearch').addEventListener('click', function () {
+    document.getElementById('searchQuery').value = ''; // Limpiar el campo de búsqueda
+    document.getElementById('results').innerHTML = ''; // Limpiar los resultados
+});
