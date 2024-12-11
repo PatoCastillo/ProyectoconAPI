@@ -149,6 +149,13 @@ input[type="text"] {
     margin-bottom: 10px; /* Espacio entre libros */
     text-align: center; /* Centrar el texto dentro de cada div */
 }
+
+.results img {
+    width: 100px; /* Ancho de la imagen */
+    height: auto; /* Mantener la proporción */
+    margin-bottom: 10px; /* Espacio entre la imagen y el texto */
+}
+
 .result-item {
     border: 1px solid #ccc;
     border-radius: 5px;
