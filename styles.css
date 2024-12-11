@@ -16,10 +16,14 @@ header {
 }
 
   /* Contenedor principal */
-  .background-container {
-    height: 100vh; /* Hace que el contenedor ocupe toda la altura de la pantalla */
-    position: relative;
-    overflow: hidden;
+.background-container {
+    position: fixed; /* Fijar la posición del contenedor */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Evitar el desbordamiento */
+    z-index: -1; /* Asegúrate de que esté detrás del contenido */
 }
 
 /* Estilo para cada capa de fondo */
@@ -27,12 +31,13 @@ header {
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    background-size: cover; /* Hace que la imagen cubra todo el contenedor */
+    width: 100%;
+    height: 100%;
+    background-size: cover; /* Asegúrate de que la imagen cubra toda la capa */
     background-position: center;
-    opacity: 0.5; /* Establece la opacidad para dar el efecto de cascada */
-    transition: opacity 1s ease;
+    opacity: 0; /* Comenzar con opacidad 0 */
+    transition: opacity 1s ease-in-out; /* Transición suave */
+    background-attachment: fixed; /* Fijar la imagen de fondo */
 }
 
 .content {
@@ -83,12 +88,9 @@ header {
     background-color: #45a049;
 }
 
-#Regresar {
+#Regresar, #Buscar {
+    padding: 10px 20px;
     margin-top: 30px;
-}
-
-#Regresar {
-    padding: 15px 25px;
     font-size: 18px;
     margin: 10px;
     cursor: pointer;
