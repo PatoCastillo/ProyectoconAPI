@@ -117,14 +117,38 @@ input[type="text"] {
     border-radius: 5px;
 }
 
-.results {
-    margin-top: 20px;
-    text-align: left;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+#bookSearchForm {
+    width: 300px; /* Ancho del formulario */
+    margin: 0 auto; /* Centrar el formulario */
+    padding: 10px; /* Espaciado interno */
+    display: flex; /* Usar flexbox */
+    flex-direction: column; /* Colocar elementos en columna */
+    align-items: center; /* Centrar elementos dentro del formulario */
 }
 
+#searchQuery {
+    width: 100%; /* Ancho completo del campo de búsqueda */
+    padding: 8px; /* Espaciado interno */
+    margin-bottom: 10px; /* Espacio entre el campo y el botón */
+}
+
+.results {
+    margin-top: 20px; /* Espacio entre el formulario y los resultados */
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente */
+    border-radius: 5px;
+    max-height: 300px; /* Limitar la altura para evitar desbordamiento */
+    overflow-y: auto; /* Habilitar scroll si hay muchos resultados */
+    display: flex; /* Usar flexbox */
+    flex-direction: column; /* Colocar los elementos en columna */
+    align-items: center; /* Centrar horizontalmente */
+    justify-content: center; /* Centrar verticalmente */
+}
+
+.results div {
+    margin-bottom: 10px; /* Espacio entre libros */
+    text-align: center; /* Centrar el texto dentro de cada div */
+}
 .result-item {
     border: 1px solid #ccc;
     border-radius: 5px;
