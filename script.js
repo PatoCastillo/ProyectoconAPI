@@ -12,6 +12,11 @@ let currentIndex = 0;
 function cambiarFondo() {
     const layers = document.querySelectorAll('.background-layer');
 
+    if (layers.length === 0) {
+        console.error('No hay capas de fondo disponibles.');
+        return;
+    }
+
     // Ocultar la capa actual
     layers.forEach(layer => {
         layer.style.opacity = 0;
