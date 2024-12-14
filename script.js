@@ -89,7 +89,7 @@ document.getElementById('bookSearchForm').addEventListener('submit', function (e
 });
 
 // Función para limpiar la búsqueda
-document.getElementById('clearSearch').addEventListener('click', function () {
+document.getElementById('clearSearch').addEventListener('submit', function () {
     document.getElementById('searchQuery').value = ''; // Limpiar el campo de búsqueda
     document.getElementById('results').innerHTML = ''; // Limpiar los resultados
 });
