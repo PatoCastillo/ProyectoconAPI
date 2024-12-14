@@ -93,3 +93,57 @@ document.getElementById('clearSearch').addEventListener('click', function () {
     document.getElementById('searchQuery').value = ''; // Limpiar el campo de búsqueda
     document.getElementById('results').innerHTML = ''; // Limpiar los resultados
 });
+
+ // API buscar película 
+ document.getElementById('movieSearchForm').addEventListener('buscar', function (event) {
+    event.preventDefault(); // Prevenir el comportamiento por defecto del formulario
+
+    const query = document.getElementById('searchQuery').value;
+    const apiKey = 'TU_API_KEY'; // Reemplaza con tu clave de API de OMDb
+    console.log("Buscando películas para:", query); // Verifica el valor de búsqueda
+    const resultsContainer = document.getElementById('results');
+    resultsContainer.innerHTML = '<p>Buscando...</p>'; // Mensaje de carga
+
+    // Llamar a la API de OMDb
+    fetch(`https://www.omdbapi.com/?s=${encodeURIComponent(query)}&apikey=${apiKey}`)
+        .then(response => {
+            console.log("Respuesta de la API:", response); // Verifica la respuesta
+            if (!response.ok) {
+                throw new Error('Error en la red');
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log("Datos recibidos:", data); // Verifica los datos obtenidos
+            resultsContainer.innerHTML = ''; // Limpiar resultados previos
+
+            if (data.Search && data.Search.length > 0) {
+                data.Search.forEach(movie => {
+                    const title = movie.Title || 'Sin título';
+                    const year = movie.Year || 'Año desconocido';
+                    const poster = movie.Poster !== 'N/A' ? movie.Poster : 'img/default-cover.jpg'; // Imagen por defecto si no hay
+
+                    const resultItem = document.createElement('div');
+                    resultItem.className = 'result-item';
+                    resultItem.innerHTML = `
+                        <img src="${poster}" alt="${title}"/>
+                        <h3>${title}</h3>
+                        <p><strong>Año:</strong> ${year}</p>
+                    `;
+                    resultsContainer.appendChild(resultItem);
+                });
+            } else {
+                resultsContainer.innerHTML = '<p>No se encontraron resultados.</p>';
+            }
+        })
+        .catch(error => {
+            console.error('Error al buscar películas:', error);
+            resultsContainer.innerHTML = '<p>Ocurrió un error al buscar películas.</p>'; // Mensaje de error
+        });
+});
+
+// Función para limpiar la búsqueda
+document.getElementById('clearSearch').addEventListener('click', function () {
+    document.getElementById('searchQuery').value = ''; // Limpiar el campo de búsqueda
+    document.getElementById('results').innerHTML = ''; // Limpiar los resultados
+});
