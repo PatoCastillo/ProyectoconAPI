@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Define la codificación de caracteres como UTF-8 para garantizar una correcta visualización de los caracteres especiales -->
+    <meta charset="UTF-8">
+    <!-- Configura la escala para que sea adecuada a diferentes tamaños de pantalla en dispositivos móviles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Enlace a la hoja de estilo de Font Awesome para los iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+    <!-- Enlace a la hoja de estilo personalizada que contiene los estilos de la página -->
+    <link rel="stylesheet" href="./style.css">
+    <!-- Título de la página que aparece en la pestaña del navegador -->
+    <title>Traductor</title>
+</head>
+<body>
+    <!-- Contenedor principal de la página -->
+    <div class="conatiner">
+        <div>
+            <!-- Cabecera con los selectores de idiomas y el botón para cambiar entre ellos -->
+            <div class="header">
+                <!-- Selector para elegir el idioma de origen -->
+                <select class="first">
+                </select>
+                <!-- Botón con icono de intercambio para cambiar entre los idiomas seleccionados -->
+                <button class="iconButton" id="change"><i class="fas fa-exchange-alt"></i></button>
+                <!-- Selector para elegir el idioma de destino -->
+                <select class="second"></select>
+            </div>
+
+            <!-- Contenedor de los cuadros de texto (áreas de texto) para ingresar y mostrar la traducción -->
+            <div class="containerTextArea">
+                <div>
+                    <!-- Área de texto donde el usuario ingresa el texto a traducir -->
+                    <textarea class="fromText" placeholder="Ingresa texto"></textarea>
+                    <div>
+                        <!-- Botón con icono de volumen para leer el texto ingresado -->
+                        <button class="read iconButton"><i class="fas fa-volume-up"></i></button>
+                    </div>
+                </div>
+                <div>
+                    <!-- Área de texto donde se muestra el texto traducido -->
+                    <textarea class="toText" placeholder="Ingresa Texto"></textarea>
+                    <div>
+                        <!-- Botón con icono de volumen para leer el texto traducido -->
+                        <button class="read iconButton"><i class="fas fa-volume-up"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botón para ejecutar la traducción -->
+            <button class="translate">Traducir</button>
+        </div>
+    </div>
+
+    <!-- Script que contiene la funcionalidad de la página (código JavaScript) -->
+    <script src="./script.js" type="module"></script>
+</body>
+</html>
