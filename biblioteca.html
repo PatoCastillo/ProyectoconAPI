@@ -1,21 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html> 
+<html lang="en"> 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buscador de Música</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Buscador de Música</title> 
+    <link rel="stylesheet" href="styles.css"> <!-- archivo de estilos CSS externo -->
 </head>
 <body>
+
     <header>
-        <h1>Buscador de Música</h1>
-        <input type="text" id="searchQuery" placeholder="Buscar canción, artista o álbum...">
-        <button onclick="searchTracks()">Buscar</button>
+        <h1>Buscador de Música</h1> 
+        <input type="text" id="searchQuery" placeholder="Buscar canción, artista o álbum..."> <!-- Campo de entrada donde el usuario escribe lo que quiere buscar -->
+        <button onclick="searchTracks()">Buscar</button> <!-- Botón que al hacer clic llama a la función `searchTracks()` para realizar la búsqueda -->
     </header>
 
+    <!-- Contenedor principal donde se mostrarán los resultados de la búsqueda -->
     <main>
-        <div id="resultsContainer"></div>
+        <div id="resultsContainer"></div> <!-- Este contenedor se llena dinámicamente con los resultados de búsqueda (por medio de JavaScript) -->
     </main>
-    <script src="app.js"></script>
+
+    <script src="app.js"></script> <!-- archivo js -->
 </body>
 </html>
