@@ -1,53 +1,90 @@
 body {
-    font-family: Arial, sans-serif;
-    background-image: url('img/multitatareas.png');
-    background-size: 40%; /* Hace que la imagen cubra todo el fondo */
-    background-position: center center; /* Centra la imagen en la página */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    background-attachment: fixed; /* Hace que la imagen no se mueva al hacer scroll */
-    background-color: #f0f0f0;
-    margin: 0;
-    padding: 0;
-    text-align: center;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+  background: url(fondo\ música.jpg) no-repeat center center fixed;
+  /* imagen de fondo que se ajusta al centro de la pantalla y se mantiene fija */
+  background-size: cover;
+  /* Asegura que la imagen de fondo cubra toda el área de la pantalla */
 }
 
 header {
-    background-color: #8de790;
-    color: rgb(10, 10, 10);
-    padding: 20px;
-    font-size: 24px;
-    font-weight: bold;
-    width: 600px; /* Ancho fijo del header */
-    margin: 0 auto; /* Esto centra el header horizontalmente */
+  text-align: center;
+  padding: 20px;
+  background-color: #000000;
+  color: #D1170E;
 }
 
-
-.container {
-    padding: 50px;
+header input {
+  padding: 10px;
+  width: 50%;
+  margin-right: 10px;
+  border: none;
+  border-radius: 5px;
 }
 
-.container h2 {
-    font-size: 28px;
-    color: #333;
+header button {
+  padding: 10px 15px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.buttons {
-    margin-top: 30px;
-    padding: 100px;
+header button:hover {
+  background-color: #D1170E;
 }
 
-.buttons button {
-    padding: 15px 25px;
-    font-size: 18px;
-    margin: 10px;
-    cursor: pointer;
-    border: none;
-    background-color: #4CAF50;
-    color: white;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+main {
+  padding: 20px;
 }
 
-.buttons button:hover {
-    background-color: #45a049;
+#resultsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.result {
+  background: white;
+  border-radius: 5px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  text-align: center;
+}
+
+.result img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.result h3 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.result p {
+  font-size: 14px;
+  color: #555;
+}
+
+.result a {
+  display: block;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #000000;
+  color: #D1170E;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.result a:hover {
+  background-color: red;
+  color: white;
 }

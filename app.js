@@ -34,7 +34,7 @@ function displayResults(tracks) {
             <img src="${imageUrl}" alt="${track.name}" style="width: 100%; height: auto; border-radius: 8px;">
             <h3>${track.name}</h3>
             <p>Artista: ${track.artist}</p>
-            <a href="${track.url}" target="_blank">Ver en Last.fm</a>
+            <a href="${track.url}" target="_blank">Ver más de esta canción</a>
         `;
 
         container.appendChild(trackElement);
