@@ -1,0 +1,52 @@
+body {
+    margin: 0; /* Elimina los márgenes predeterminados del body */
+    padding: 0; /* Elimina el padding predeterminado */
+    font-family: Arial, sans-serif; /* Define la fuente que se utilizará en la página */
+    display: flex; /* Utiliza el modelo de diseño Flexbox */
+    flex-direction: column; /* Organiza los elementos en una columna */
+    justify-content: center; /* Centra los elementos verticalmente */
+    align-items: center; /* Centra los elementos horizontalmente */
+    height: 100vh; /* Hace que el body ocupe toda la altura de la ventana */
+    background-color: #f4f4f4; /* Establece un color de fondo gris claro */
+}
+
+h1 {
+    text-align: center; /* Centra el título horizontalmente */
+    color: #333; /* Define el color del texto como gris oscuro */
+    padding: 20px; /* Añade espacio dentro del título */
+    margin: 0; /* Elimina el margen predeterminado alrededor del título */
+}
+
+#map {
+    width: 80%; /* Hace que el mapa ocupe el 80% del ancho del contenedor */
+    height: 70%; /* Hace que el mapa ocupe el 70% de la altura del contenedor */
+    border-radius: 8px; /* Añade bordes redondeados al mapa */
+}
+
+.search-bar {
+    text-align: center; /* Centra la barra de búsqueda */
+    margin: 20px 0; /* Añade espacio arriba y abajo de la barra de búsqueda */
+}
+
+#searchQuery {
+    padding: 10px; /* Añade espacio dentro del campo de entrada */
+    font-size: 1rem; /* Define el tamaño de la fuente */
+    width: 51%; /* Establece el ancho del campo de entrada al 51% del contenedor */
+    max-width: 300px; /* Establece el ancho máximo del campo de entrada a 300px */
+}
+
+
+#searchButton {
+    padding: 10px 20px; /* Añade espacio dentro del botón */
+    font-size: 1rem; /* Define el tamaño de la fuente del botón */
+    background-color: #4CAF50; /* Establece el color de fondo del botón (verde) */
+    color: white; /* Establece el color del texto como blanco */
+    border: none; /* Elimina los bordes predeterminados del botón */
+    cursor: pointer; /* Cambia el cursor a mano cuando pasa sobre el botón */
+    margin-left: 10px; /* Añade espacio a la izquierda del botón para separar el campo de entrada */
+}
+
+
+#searchButton:hover {
+    background-color: #45a049; /* Cambia el color de fondo del botón cuando el cursor pasa sobre él (verde más oscuro) */
+}
