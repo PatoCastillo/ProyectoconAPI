@@ -170,65 +170,65 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-//API para clima
+//API clima 
 const weatherForm = document.getElementById('weatherForm');
-const resultsContainer = document.getElementById('weatherResults');
+        const resultsContainer = document.getElementById('weatherResults');
 
-if (weatherForm) {
-    weatherForm.addEventListener('submit', function (event) {
-        event.preventDefault(); // Prevenir el comportamiento por defecto del formulario
+        if (weatherForm) {
+            weatherForm.addEventListener('submit', function (event) {
+                event.preventDefault(); // Prevenir el comportamiento por defecto del formulario
 
-        // Intentar obtener la ubicación del dispositivo
-        if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(success, error);
-        } else {
-            resultsContainer.innerHTML = '<p>Geolocalización no es soportada en este navegador.</p>';
+                // Intentar obtener la ubicación del dispositivo
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(success, error);
+                } else {
+                    resultsContainer.innerHTML = '<p>Geolocalización no es soportada en este navegador.</p>';
+                }
+            });
         }
-    });
-}
 
-// Función de éxito para la geolocalización
-function success(position) {
-    const lat = position.coords.latitude;
-    const lon = position.coords.longitude;
+        // Función de éxito para la geolocalización
+        function success(position) {
+            const lat = position.coords.latitude;
+            const lon = position.coords.longitude;
 
-    // Llamar a la API de WeatherAPI con las coordenadas
-    fetch(`https://api.weatherapi.com/v1/current.json?key=ca7cf7efc1124b40bfe21855241712&q=${lat},${lon}`)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Error en la red');
-            }
-            return response.json();
-        })
-        .then(data => {
-            resultsContainer.innerHTML = ''; // Limpiar resultados previos
+            // Llamar a la API de WeatherAPI con las coordenadas
+            fetch(`https://api.weatherapi.com/v1/current.json?key=ca7cf7efc1124b40bfe21855241712&q=${lat},${lon}`)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Error en la red');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    resultsContainer.innerHTML = ''; // Limpiar resultados previos
 
-            if (data) {
-                const location = data.location.name;
-                const temperature = data.current.temp_c;
-                const condition = data.current.condition.text;
-                const icon = data.current.condition.icon;
+                    if (data) {
+                        const location = data.location.name;
+                        const temperature = data.current.temp_c;
+                        const condition = data.current.condition.text;
+                        const icon = data.current.condition.icon;
 
-                const resultItem = document.createElement('div');
-                resultItem.className = 'result-item';
-                resultItem.innerHTML = `
-                    <h3>Clima en ${location}</h3>
-                    <p><strong>Temperatura:</strong> ${temperature} °C</p>
-                    <p><strong>Condición:</strong> ${condition}</p>
-                    <img src="${icon}" alt="${condition}" />
-                `;
-                resultsContainer.appendChild(resultItem);
-            } else {
-                resultsContainer.innerHTML = '<p>No se encontraron resultados.</p>';
-            }
-        })
-        .catch(error => {
-            console.error('Error al buscar el clima:', error);
-            resultsContainer.innerHTML = '<p>Ocurrió un error al buscar el clima.</p>'; // Mensaje de error
-        });
-}
+                        const resultItem = document.createElement('div');
+                        resultItem.className = 'result-item';
+                        resultItem.innerHTML = `
+                            <h3>Clima en ${location}</h3>
+                            <p><strong>Temperatura:</strong> ${temperature} °C</p>
+                            <p><strong>Condición:</strong> ${condition}</p>
+                            <img src="${icon}" alt="${condition}" />
+                        `;
+                        resultsContainer.appendChild(resultItem);
+                    } else {
+                        resultsContainer.innerHTML = '<p>No se encontraron resultados.</p>';
+                    }
+                })
+                .catch(error => {
+                    console.error('Error al buscar el clima:', error);
+                    resultsContainer.innerHTML = '<p>Ocurrió un error al buscar el clima.</p>'; // Mensaje de error
+                });
+        }
 
-// Función de error para la geolocalización
-function error() {
-    resultsContainer.innerHTML = '<p>No se pudo obtener la ubicación.</p>';
-}
+        // Función de error para la geolocalización
+        function error() {
+            resultsContainer.innerHTML = '<p>No se pudo obtener la ubicación.</p>';
+        }
