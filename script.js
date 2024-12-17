@@ -3,9 +3,9 @@ const imagenes = [
     'img/1.jpg', // Ruta de la primera imagen
     'img/2.jpg', // Ruta de la segunda imagen
     'img/3.jpg', // Ruta de la tercera imagen
-    'img/4.jpg'  // Ruta de la cuarta imagen
-    'img/5.jpg'  // Ruta de la quinta imagen
-    'img/6.jpg'  // Ruta de la sexta imagen
+    'img/4.jpg',  // Ruta de la cuarta imagen
+    'img/5.jpg',  // Ruta de la quinta imagen
+    'img/6.jpg',  // Ruta de la sexta imagen
     'img/7.jpg'  // Ruta de la septima imagen
 ];
 
