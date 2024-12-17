@@ -202,7 +202,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     const resultItem = document.createElement('div');
                     resultItem.className = 'result-item';
                     resultItem.innerHTML = `
-                        <h3>Clima en ${location}</h3>
+                        <h2>Clima en ${location}</h2>
                         <p><strong>Temperatura:</strong> ${temperature} °C</p>
                         <p><strong>Condición:</strong> ${condition}</p>
                         <img src="${icon}" alt="${condition}" />
