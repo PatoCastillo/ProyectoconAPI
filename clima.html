@@ -3,13 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>API de Clima</title>
+    <title>Clima Actual</title>
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="background-container">
+        <div class="background-layer"></div>
+        <div class="background-layer"></div>
+        <div class="background-layer"></div>
+        <div class="background-layer"></div>
+    </div>
+    <h1>Consulta el Clima</h1>
     <form id="weatherForm">
-        <button type="submit">Obtener Clima</button>
+        <input type="text" id="searchQuery" placeholder="Ingresa una ciudad" required>
+        <button id="Buscar" type="submit">Buscar Clima</button>
+        <button type="button" id="clearSearch">Limpiar Búsqueda</button> <!-- Botón para limpiar la búsqueda -->
+        <button id="Regresar" onclick="window.location.href='index.html'">Regresar</button>
     </form>
+
     <div id="weatherResults"></div>
+    <script src="script.js"></script>
 </body>
 </html>
