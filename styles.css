@@ -164,19 +164,25 @@ input[type="text"], input {
 }
 
 /* Estilos adicionales para el clima */
+body {
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
 #weatherResults {
     margin-top: 20px;
 }
 
 .result-item {
-    border: 1px solid #ccc;
+    background-color: white;
+    padding: 15px;
     border-radius: 5px;
-    padding: 10px;
-    margin: 10px;
-    width: 300px;
-    background-color: #fff;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+img {
+    width: 50px;
+    height: auto;
 }
 
 .result-item h3 {
@@ -237,14 +243,4 @@ input[type="text"], input {
 
 .movie a:hover {
     text-decoration: underline;
-}
-
-/* Estilos para el clima */
-.result-item {
-    margin-top: 20px;
-}
-
-.result-item img {
-    width: 50px; /* Ancho de la imagen del clima */
-    height: 50px; /* Alto de la imagen del clima */
 }
