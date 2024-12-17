@@ -1,31 +1,40 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de Inicio</title>
+    <title>Inicio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
-<header>
-    Bienvenido a tu Asistente Virtual
-</header>
-
-<div class="container">
-    <h2>¿Qué quieres hacer el día de hoy?</h2>
-
-    <div class="buttons">
-        <button onclick="window.location.href='buscar-libros.html'">Buscar libros</button>
-        <button onclick="window.location.href='buscar-peliculas.html'">Buscar películas</button>
-        <button onclick="window.location.href='biblioteca.html'">Buscar música sin copyright</button>
-        <button onclick="window.location.href='ver-clima.html'">Ver el clima</button>
-        <button onclick="window.location.href='tráfico.html'">Ver el tráfico</button>
-        <button onclick="window.location.href='precios.html'">Comparar precios de productos</button>
-        <button onclick="window.location.href='Traductor.html'">Utilizar traductor</button>
+    <div class="background-container">
+        <div class="background-layer"></div>
+        <div class="background-layer"></div>
+        <div class="background-layer"></div>
+        <div class="background-layer"></div>
+        <div class="background-layer"></div>
+        <div class="background-layer"></div>
+        <div class="background-layer"></div>
     </div>
-</div>
 
+    <div class="content">
+        <header>Bienvenido a tu Asistente Virtual</header>
+        <h2>¿Qué quieres hacer el día de hoy?</h2>
+
+        <div class="buttons">
+            <button onclick="window.location.href='buscarLib.html'">Buscar libros</button>
+            <button onclick="window.location.href='buscarPeli.html'">Buscar películas</button>
+            <button onclick="window.location.href='clima.html'">Ver el clima</button>
+            <button onclick="window.location.href='biblioteca.html'">Buscar música sin copyright</button>
+            <button onclick="window.location.href='tráfico.html'">Ver el tráfico</button>
+            <button onclick="window.location.href='precios.html'">Comparar precio de productos</button>
+            <button onclick="window.location.href='Traductor.html'">Utilizar traductor</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
-<script></script>
+
 </html>
