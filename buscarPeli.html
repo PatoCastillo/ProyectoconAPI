@@ -2,8 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buscar Películas</title>
+    <title>Buscador de Películas</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -14,16 +13,15 @@
         <div class="background-layer"></div>
     </div>
     <div class="content">
-        <header>Buscar Películas</header>
-        <h2>Encuentra tus películas favoritas</h2>
-        <form id="movieSearchForm">
-            <input type="text" id="searchQuery" placeholder="Escribe el título de la película" required>
-            <button id="Buscar" type="submit">Buscar</button>
-            <button type="button" id="clearSearch">Limpiar Búsqueda</button> <!-- Botón para limpiar la búsqueda -->
-            <button type="button" id="Regresar" onclick="window.location.href='index.html'">Regresar</button>
-        </form>
-        <div id="results" class="results"></div>
-    </div>
+        <header>Buscar Peliculas</header>
+    <h2>Encuentra una pelicula interesante</h2>
+    <form id="search-form">
+        <input type="text" id="search-input" placeholder="Ingresa el título de la película" required>
+        <button  id="Buscar" type="submit">Buscar</button>
+        <button type="button" id="clearSearch">Limpiar Búsqueda</button> <!-- Botón para limpiar la búsqueda -->
+        <button id="Regresar" onclick="window.location.href='index.html'">Regresar</button>
+    </form>
+    <div id="results" class="results-container"></div>
     <script src="script.js"></script>
 </body>
 </html>

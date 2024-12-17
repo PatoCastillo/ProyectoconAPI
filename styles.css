@@ -1,9 +1,17 @@
- /* Estilos globales */
- body, html {
+/* Estilos globales */
+body, html {
     margin: 0;
     padding: 0;
     height: 100%;
     font-family: Arial, sans-serif;
+}
+
+body {
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
 }
 
 header {
@@ -15,7 +23,7 @@ header {
     border-radius: 50px;
 }
 
-  /* Contenedor principal */
+/* Contenedor principal */
 .background-container {
     position: fixed; /* Fijar la posición del contenedor */
     top: 0;
@@ -50,7 +58,7 @@ header {
     z-index: 1; /* Asegura que el contenido quede encima de las imágenes */
 }
 
-.content h2, .content header{
+.content h2, .content header {
     background-color: #4CAF50;
     border-radius: 50px;
     padding: 10px 20px;
@@ -59,10 +67,9 @@ header {
     text-align: center;
     color: white;
     opacity: 90%;
-
 }
 
-.content h2{
+.content h2 {
     margin-top: 20px;
     text-align: center;
 }
@@ -105,14 +112,15 @@ header {
     background-color: #45a049;
 }
 
-
 form {
+    text-align: center;
     margin-bottom: 20px;
 }
 
-input[type="text"] {
-    padding: 10px;
+input[type="text"], input {
     width: 300px;
+    padding: 10px;
+    margin-right: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
@@ -132,17 +140,16 @@ input[type="text"] {
     margin-bottom: 10px; /* Espacio entre el campo y el botón */
 }
 
-.results {
+#results {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     margin-top: 20px; /* Espacio entre el formulario y los resultados */
     padding: 10px;
     background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente */
     border-radius: 5px;
     max-height: 300px; /* Limitar la altura para evitar desbordamiento */
     overflow-y: auto; /* Habilitar scroll si hay muchos resultados */
-    display: flex; /* Usar flexbox */
-    flex-direction: column; /* Colocar los elementos en columna */
-    align-items: center; /* Centrar horizontalmente */
-    justify-content: center; /* Centrar verticalmente */
 }
 
 .results div {
@@ -164,25 +171,7 @@ input[type="text"] {
     width: 300px;
     background-color: #fff;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-    display: inline-block;
-    width: 200px;
     text-align: center;
-}
-
-.result-item h3 {
-    font-size: 18px;
-    margin: 0 0 10px;
-}
-
-.result-item p {
-    font-size: 14px;
-    color: #777;
-}
-
-.result-item img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
 }
 
 .result-item h3 {
@@ -193,4 +182,65 @@ input[type="text"] {
 .result-item p {
     font-size: 0.9em;
     color: #666;
+}
+
+.result-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.results-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten si son muchos */
+    gap: 16px; /* Espacio entre elementos */
+    justify-content: center; /* Centra los resultados */
+}
+
+.movie {
+    width: 200px; /* Ancho fijo para cada tarjeta */
+    text-align: center; /* Centra el contenido */
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.movie img {
+    width: 100%; /* Imagen ocupa todo el ancho de la tarjeta */
+    border-radius: 8px 8px 0 0; /* Redondeo solo en la parte superior */
+    object-fit: cover; /* Ajuste para mantener proporción */
+}
+
+.movie h3 {
+    font-size: 16px;
+    margin: 10px 0 5px;
+}
+
+.movie p {
+    font-size: 14px;
+    color: #555;
+}
+
+.movie a {
+    display: block;
+    margin-top: 10px;
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.movie a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos adicionales para el clima */
+#weatherResults {
+    margin-top: 20px;
+}
+
+.result-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
 }
