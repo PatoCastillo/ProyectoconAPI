@@ -13,15 +13,16 @@
         <div class="background-layer"></div>
         <div class="background-layer"></div>
     </div>
-    <h1>Consulta el Clima</h1>
-    <form id="weatherForm">
-        <input type="text" id="searchQuery" placeholder="Ingresa una ciudad" required>
-        <button id="Buscar" type="submit">Buscar Clima</button>
-        <button type="button" id="clearSearch">Limpiar Búsqueda</button> <!-- Botón para limpiar la búsqueda -->
-        <button id="Regresar" onclick="window.location.href='index.html'">Regresar</button>
-    </form>
-
-    <div id="weatherResults"></div>
+    <div class="content">
+        <h2>Consulta el Clima</h2>
+        <form id="weatherForm">
+            <input type="text" id="searchQuery" placeholder="Ingresa una ciudad" required>
+            <button id="Buscar" type="submit">Buscar Clima</button>
+            <button type="button" id="clearSearch">Limpiar Búsqueda</button> <!-- Botón para limpiar la búsqueda -->
+            <button id="Regresar" onclick="window.location.href='index.html'">Regresar</button>
+        </form>
+        <div id="weatherResults"></div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
