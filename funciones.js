@@ -38,8 +38,7 @@ setInterval(cambiarFondo, 10000); // Llama a la función cambiarFondo cada 10 se
 
 // Cambiar la imagen al cargar la página por primera vez
 cambiarFondo(); // Llama a la función para mostrar la primera imagen
-let map; // Variable para almacenar el objeto del mapa
-let trafficLayer; // Variable para la capa de tráfico
+
 // URL de las APIs
 const API_MERCADOLIBRE = 'https://api.mercadolibre.com/sites/MLM/search?q='; // API de MercadoLibre para México
 const API_DUMMY = 'https://dummyjson.com/products/search?q='; // API ficticia DummyJSON para pruebas
