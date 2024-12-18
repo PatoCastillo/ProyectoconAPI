@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar Libros</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="background-container">
+        <div class="background-layer"></div>
+        <div class="background-layer"></div>
+        <div class="background-layer"></div>
+        <div class="background-layer"></div>
+        <div class="background-layer"></div>
+        <div class="background-layer"></div>
+        <div class="background-layer"></div>
+    </div>
+    <div class="content">
+        <header>Buscar Libros</header>
+        <h2>Encuentra libros interesantes</h2>
+        <form id="bookSearchForm">
+            <input type="text" id="searchQuery" placeholder="Escribe el título del libro" required>
+            <button id="Buscar" type="submit">Buscar</button>
+            <button type="button" id="clearSearch">Limpiar Búsqueda</button> <!-- Botón para limpiar la búsqueda -->
+            <button id="Regresar" onclick="window.location.href='index.html'">Regresar</button>
+        </form>
+        <div id="results" class="results"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
