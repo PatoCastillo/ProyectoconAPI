@@ -38,8 +38,8 @@ body {
 header {
   text-align: center; /* Centra el contenido del header */
   padding: 20px; /* Añade relleno de 20px alrededor del contenido */
-  background-color: #000000; /* Establece el color de fondo como negro */
-  color: #4CAF50; /* Establece el color del texto como un rojo brillante */
+  background-color: #4CAF50; /* Establece el color de fondo como negro */
+    border-radius: 5px;
 }
 
 h1 {
