@@ -39,7 +39,7 @@ setInterval(cambiarFondo, 10000); // Llama a la función cambiarFondo cada 10 se
 // Cambiar la imagen al cargar la página por primera vez
 cambiarFondo(); // Llama a la función para mostrar la primera imagen
 
-// API buscar libro 
+// API buscar libro (googleapis)
 const bookSearchForm = document.getElementById('bookSearchForm'); // Selecciona el formulario de búsqueda de libros
 if (bookSearchForm) { // Verifica si el formulario existe
     bookSearchForm.addEventListener('submit', function (event) {
@@ -101,7 +101,7 @@ document.getElementById('clearSearch').addEventListener('click', function () {
     document.getElementById('results').innerHTML = ''; // Limpia los resultados
 });
 
-// API buscar película 
+// API buscar película (api themoviedb)
 document.addEventListener('DOMContentLoaded', () => { // Espera a que el contenido del DOM esté cargado
     document.getElementById('search-form').addEventListener('submit', function(event) {
         event.preventDefault(); // Prevenir el comportamiento por defecto del formulario
@@ -171,7 +171,7 @@ document.addEventListener('DOMContentLoaded', () => { // Espera a que el conteni
     }
 });
 
-// API clima 
+// API clima (weatherapi)
 document.addEventListener('DOMContentLoaded', () => { // Espera a que el contenido del DOM esté cargado
     const weatherForm = document.getElementById('weatherForm'); // Selecciona el formulario de clima
     const resultsContainer = document.getElementById('weatherResults'); // Selecciona el contenedor de resultados del clima
