@@ -30,6 +30,13 @@ body {
     background-attachment: fixed; /* Fija la imagen de fondo */
 }
 
+header {
+  text-align: center; /* Centra el contenido del header */
+  padding: 20px; /* Añade relleno de 20px alrededor del contenido */
+  background-color: #000000; /* Establece el color de fondo como negro */
+  color: #4CAF50; /* Establece el color del texto como un rojo brillante */
+}
+
 h1 {
     text-align: center; /* Centra el título */
     color: #4CAF50;
