@@ -37,7 +37,7 @@ body {
 
 h1 {
     text-align: center; /* Centra el título horizontalmente */
-    color: #000; /* Define el color del texto*/
+    color: white; /* Define el color del texto*/
     padding: 20px; /* Añade espacio dentro del título */
     margin: 0; /* Elimina el margen predeterminado alrededor del título */
 }
