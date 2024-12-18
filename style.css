@@ -28,13 +28,6 @@
     padding: 0;
 }
 
-body{
-    background: url(Fondo.jpg) no-repeat center center fixed;
-    /* imagen de fondo que se ajusta al centro de la pantalla y se mantiene fija */
-    background-size: cover;
-    /* Asegura que la imagen de fondo cubra toda el área de la pantalla */
-}
-
 /* Estilo para el contenedor principal que envuelve todo el contenido */
 .conatiner{
     width: 100%;
