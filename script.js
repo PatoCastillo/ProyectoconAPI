@@ -184,8 +184,8 @@ document.addEventListener('DOMContentLoaded', () => { // Espera a que el conteni
             const query = document.getElementById('searchQuery').value; // Obtener la ciudad a buscar
             console.log("Buscando clima para:", query); // Mensaje de depuración
 
-            // Llamar a la API de WeatherAPI
-            fetch(`https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${encodeURIComponent(query)}`) // Realiza la solicitud a la API
+            // Llamar a la API de WeatherAPI con el parámetro de idioma en español
+            fetch(`https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${encodeURIComponent(query)}&lang=es`) // Agrega &lang=es para español
                 .then(response => {
                     console.log("Respuesta de búsqueda de ciudad:", response); // Mensaje de depuración
                     if (!response.ok) { // Verifica si la respuesta es correcta
@@ -200,7 +200,7 @@ document.addEventListener('DOMContentLoaded', () => { // Espera a que el conteni
                     const location = data.location.name; // Obtiene el nombre de la ubicación
                     const temperature = data.current.temp_c; // Obtiene la temperatura actual en °C
                     const condition = data.current.condition.text; // Obtiene la condición del clima
-                    const icon = data.current.condition.icon; // Obtiene el icono de la condición
+                    const iconClass = getWeatherIconClass(data.current.condition.code); // Obtiene la clase del icono
 
                     const resultItem = document.createElement('div'); // Crea un nuevo div para el resultado del clima
                     resultItem.className = 'result-item'; // Establece la clase del div
@@ -208,7 +208,7 @@ document.addEventListener('DOMContentLoaded', () => { // Espera a que el conteni
                         <h2>Clima en ${location}</h2> <!-- Muestra la ubicación -->
                         <p><strong>Temperatura:</strong> ${temperature} °C</p> <!-- Muestra la temperatura -->
                         <p><strong>Condición:</strong> ${condition}</p> <!-- Muestra la condición del clima -->
-                        <img src="${icon}" alt="${condition}" /> <!-- Muestra el icono del clima -->
+                        <i class="wi ${iconClass}"></i> <!-- Muestra el icono del clima -->
                     `;
                     resultsContainer.appendChild(resultItem); // Agrega el resultado al contenedor
                 })
@@ -217,5 +217,20 @@ document.addEventListener('DOMContentLoaded', () => { // Espera a que el conteni
                     resultsContainer.innerHTML = '<p>Ocurrió un error al buscar el clima.</p>'; // Mensaje de error
                 });
         });
+    } else {
+        console.error('El formulario de búsqueda de clima no se encontró.'); // Mensaje de error si no se encuentra el formulario
     }
 });
+
+// Función para obtener la clase del icono según el código de condición
+function getWeatherIconClass(code) {
+    if (code === 1000) return 'wi-day-sunny'; // Soleado
+    if (code === 1003) return 'wi-day-cloudy'; // Parcialmente nublado
+    if (code === 1006) return 'wi-cloudy'; // Nublado
+    if (code === 1009) return 'wi-cloud'; // Muy nublado
+    if (code >= 1030 && code <= 1135) return 'wi-fog'; // Niebla
+    if (code >= 2000 && code <= 2003) return 'wi-day-sunny'; // Tormentas
+    if (code >= 3000 && code <= 3003) return 'wi-snow'; // Nieve
+    // Agrega más condiciones según sea necesario
+    return 'wi-na'; // No disponible
+}
